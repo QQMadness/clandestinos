@@ -16,31 +16,32 @@
 
 <body class="contenedorPrincipal sombra">
     <header>
-        <nav class="navbar">
-            <div class="navbar-flex-izq">
-                <h2 class="nombre">CLANDESTINOS#</h2>
-            </div>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-            <ul class="navbar-flex-centro">
-                <li><a href="index.html">INICIO</a></li>
-                <li><a href="#">MUSICOS</a></li>
-                <li><a href="#">LUGARES</a></li>
-                <li><a href="#">EVENTOS</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropbtn">ECOSISTEMA</a>
-                  <ul class="dropdown-content">
-                    <li><a href="#">Tiendas de música</a></li>  
-                    <li><a href="#">Salas de ensayo</a></li>
-                    <li><a href="#">Estudios de grabación</a></li>
-                    <li><a href="#">Productores</a></li>
-                    <li><a href="#">Sonidistas</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">INGRESAR</a></li>
-            </ul>
-            
-        </nav>
-        
+      <nav class="navbar">
+          <div class="navbar-flex-izq">
+              <h2 class="nombre">CLANDESTINOS#</h2>
+          </div>
+          <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+          <ul class="navbar-flex-centro">
+            <li><a href="index.html">INICIO</a></li>
+            <li><a href="#">MUSICOS</a></li>
+            <li><a href="#">LUGARES</a></li>
+            <li><a href="#">EVENTOS</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn">ECOSISTEMA</a>
+              <ul class="dropdown-content">
+                <li><a href="#">Tiendas de música</a></li>  
+                <li><a href="#">Salas de ensayo</a></li>
+                <li><a href="#">Estudios de grabación</a></li>
+                <li><a href="#">Productores</a></li>
+                <li><a href="#">Sonidistas</a></li>
+              </ul>
+            </li>
+            <li><a href="#">INGRESAR</a></li>
+          </ul>
+      </nav>
+    </header>
+
+           
         <section class="hero">
             <div class="hero-content">
                 <h1>Bienvenido a Clandestinos#</h1>
@@ -113,66 +114,92 @@
           </section>
           
 
-          <section class="descubre">
-            <h2># Descubre</h2>
-            <div class="descubre-perfil">
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0001.jpg" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>metalero666</p>
+          <div class="container">
+            <!-- Título de la sección -->
+            <h2 class="section-title"># Descubre</h2>
+            
+            <!-- Bloque 1: Perfiles Destacados (Recomendados) -->
+            <section class="recommended">
+              <h3 class="section-subtitle">Perfiles Destacados</h3>
+              <div class="recommended-profiles">
+                <!-- Ejemplos de perfiles destacados -->
+                <div class="profile-card" data-category="musico">
+                  <img src="assets/images/perfiles/perfil-img-0001.jpg" alt="Perfil metalero666">
+                  <p>metalero666</p>
+                </div>
+                <div class="profile-card" data-category="productor">
+                  <img src="assets/images/perfiles/perfil-img-0002.jpg" alt="Perfil Kremar">
+                  <p>Kremar</p>
+                </div>
+                <div class="profile-card" data-category="musico">
+                  <img src="assets/images/perfiles/perfil-img-0003.jpg" alt="Perfil melinLove">
+                  <p>melinLove</p>
+                </div>
+                <div class="profile-card" data-category="otros">
+                  <img src="assets/images/perfiles/perfil-img-0004.webp" alt="Perfil Por si acaso">
+                  <p>Por si acaso</p>
+                </div>
+                <div class="profile-card" data-category="musico">
+                  <img src="assets/images/perfiles/perfil-img-0005.webp" alt="Perfil SonicMaster">
+                  <p>SonicMaster</p>
+                </div>
               </div>
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0002.jpg" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>Kremar</p>
+            </section>
+            
+            <!-- Bloque 2: Buscador de Perfiles -->
+            <section class="search-section">
+              <h3 class="section-subtitle">Buscar Perfiles</h3>
+              <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar perfiles...">
+                <select id="categoryFilter">
+                  <option value="todos">Todos</option>
+                  <option value="musico">Músicos</option>
+                  <option value="musico">Lugar</option>
+                  <option value="musico">Tienda</option>
+                  <option value="musico">Sala de ensayo</option>
+                  <option value="musico">Estudio grabación</option>
+                  <option value="productor">Productor</option>
+                  <option value="musico">Sonidista</option>
+                </select>
+                <button id="searchBtn">Buscar</button>
               </div>
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0003.jpg" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>melinLove</p>
+              <div class="search-results" id="searchResults">
+                <!-- Ejemplos de perfiles para búsqueda -->
+                <div class="profile-card" data-category="tienda">
+                  <img src="assets/images/perfiles/perfil-img-0006.webp" alt="Perfil Octavia">
+                  <p>Octavia</p>
+                </div>
+                <div class="profile-card" data-category="musico">
+                  <img src="assets/images/perfiles/perfil-img-0007.webp" alt="Perfil Lurotavan">
+                  <p>Lurotavan</p>
+                </div>
+                <div class="profile-card" data-category="sala">
+                  <img src="assets/images/perfiles/perfil-img-0008.webp" alt="Perfil El Refugio">
+                  <p>El Refugio</p>
+                </div>
+                <div class="profile-card" data-category="productor">
+                  <img src="assets/images/perfiles/perfil-img-0009.jpg" alt="Perfil FerChampo">
+                  <p>FerChampo</p>
+                </div>
+                <div class="profile-card" data-category="musico">
+                  <img src="assets/images/perfiles/perfil-img-0010.jpg" alt="Perfil NatyRock">
+                  <p>NatyRock</p>
+                </div>
+                <div class="profile-card" data-category="musico">
+                  <img src="assets/images/perfiles/perfil-img-0011.jpg" alt="Perfil Devastacion">
+                  <p>Devastacion</p>
+                </div>
               </div>
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0004.webp" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>Por si acaso</p>
-              </div>
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0005.webp" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>SonicMaster</p>
-              </div>
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0006.webp" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>Octavia</p>
-              </div>
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0007.webp" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>Lurotavan</p>
-              </div>
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0008.webp" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>El Refugio</p>
-              </div>
-
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0009.jpg" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>FerChampo</p>
-              </div>
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0010.jpg" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>NatyRock</p>
-              </div>
-              <div class="descubre-perfil-item"> 
-                <a href="#"><img src="assets/images/perfiles/perfil-img-0011.jpg" alt="Perfil" class="descubre-perfil-item-img"></a>
-                <p>Devastacion</p>
-              </div>
-
-            </div>
-          </section>
+            </section>
+          </div>
 
 
           <section class="final">
 
           </section>
-          
-
 
     </header>
+
 
     <!-- Modal (Popup) para ampliar imágenes -->
     <div id="popup-modal" class="modal">
@@ -180,6 +207,20 @@
         <img class="modal-content" id="modal-image" alt="Imagen ampliada del evento">
     </div>
   
+    <!-- Modal para mostrar el detalle del perfil -->
+  <div id="profileDetailModal" class="modal-detail">
+    <div class="modal-content-detail">
+      <span id="profileCloseBtn" class="close-detail">&times;</span>
+      <!-- Contenedor para la información del perfil -->
+      <div id="modalProfileDetailContent">
+        <img src="" alt="Imagen de perfil" id="profileImageDetail">
+        <h3 id="profileNameDetail"></h3>
+        <p id="profileInfoDetail">Aquí se mostrará información adicional del perfil. Rock & Roll</p>
+      </div>
+    </div>
+  </div>
+
+
     <script type="text/javascript" src="assets/js/scripts.js"></script>
 </body>
 </html>
