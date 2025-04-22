@@ -1,11 +1,3 @@
-/*-----------------
-Selectores:
-h1 (Elemento)
-.h1 (Clase)
-#h1 (Id)
------------------*/
-
-
 * {
   margin: 0px;
 	padding: 3px;
@@ -24,13 +16,7 @@ html {
   max-width: 100%;
 }
 
-/*
-body {
-    margin: 0px, 0px;
-    padding: 0px;
-    width: 100%;
-}
-*/
+
 a {
   text-decoration: none;
  }
@@ -85,7 +71,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;    
 }
 
-
 .contenedorPrincipal {
   margin: 0.6em auto;
   padding: 0px, 0px;
@@ -136,6 +121,7 @@ p {
   top: 0;
 }
 
+
 .navbar ul {
   display: flex;
   list-style: none;
@@ -167,28 +153,6 @@ p {
   cursor: pointer;
 }
 
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-  .navbar ul {
-      display: none; /* Oculta el menú inicialmente */
-      flex-direction: column;
-      background-color: #000;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      z-index: 998;
-  }
-
-  .navbar ul.active {
-      display: flex; /* Muestra el menú al hacer clic */
-  }
-
-  .menu-toggle {
-      display: block; /* Botón hamburguesa */
-  }
-}
-
 
 .navbar-flex {
   display: inline-flex;
@@ -197,9 +161,10 @@ p {
 }
 
 .navbar-flex-centro {
-  display: inline-flex;
+  display: flex;
   flex-wrap: nowrap;
   flex-basis: 70%;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -209,8 +174,6 @@ p {
   flex-basis: 25%;
   justify-content: flex-end;
 }
-
-
 
 /*---- BIENVENIDA ------------------------*/
 
@@ -271,7 +234,6 @@ p {
 .btn-cta:hover {
   background-color: #6d3f85;
 }
-
 
 /*----- PROXIMOS EVENTOS -----------*/
 
@@ -424,6 +386,76 @@ p {
 }
 
 
+/*--------- CONTACTO ----------------------------------*/
+.contacto {
+  padding: 2rem;
+  background-color: #000;
+  text-align: center;
+  color: white;
+}
+
+.contacto h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: rgb(201, 178, 245);
+  font-weight: 200;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  font-size: 1rem;
+  color: rgb(201, 178, 245);
+  color: #d496fa;
+  font-weight: 300;
+  text-align: left;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #45215b; /* Línea en lugar de caja */
+  color: white;
+  font-size: 1rem;
+  padding: 5px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-bottom-color: rgb(166, 138, 222); /* Cambio de color al enfocar */
+}
+
+textarea {
+  resize: none; /* Evita redimensionamiento */
+}
+
+button {
+  background-color: #45215b;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6d3f85;
+}
+
+.error-input {
+  border-bottom: 2px solid red !important; /* Cambia la línea a rojo */
+}
+
+
 /*----- Footer  -------------------------------*/
 .footer {
   display: flex;
@@ -434,3 +466,32 @@ p {
   background-color: #261233;
 }
 
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar ul {
+      display: none; /* Oculta el menú inicialmente */
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+  }
+
+  .navbar ul.active {
+      display: flex; /* Muestra el menú al hacer clic */
+  }
+
+  .navbar-flex-centro.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+      display: block; /* Botón hamburguesa */
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+  }
+}
