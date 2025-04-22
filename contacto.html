@@ -43,26 +43,31 @@
             </div>
         </section>
         
+        <section class="contacto">
+            <h2>Envíanos tu mensaje</h2>
+            <form id="contact-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
         
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
           
-          <section class="footer">
-                <h3>Acerca</h3>
-                <p>Clandestinos#</p>
-                <p>Comunidad</p>
-            
-          </section>
-
-
-
+        <section class="footer">
+            <h3>Acerca</h3>
+            <p>Clandestinos#</p>
+            <p>Comunidad</p>   
+        </section>
 
     </header>
 
-    <!-- Modal (Popup) para ampliar imágenes -->
-    <div id="popup-modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-image" alt="Imagen ampliada del evento">
-    </div>
-  
+      
     <script type="text/javascript" src="assets/js/scripts.js"></script>
 </body>
 </html>
