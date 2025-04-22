@@ -1,0 +1,436 @@
+/*-----------------
+Selectores:
+h1 (Elemento)
+.h1 (Clase)
+#h1 (Id)
+-----------------*/
+
+
+* {
+  margin: 0px;
+	padding: 3px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+}
+
+html {
+  margin: 0px;
+	padding: 0px;
+  background-color: rgb(255, 255, 255);
+  background-color: rgb(224, 213, 245);
+  max-width: 100%;
+}
+
+/*
+body {
+    margin: 0px, 0px;
+    padding: 0px;
+    width: 100%;
+}
+*/
+a {
+  text-decoration: none;
+ }
+
+ul {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 5px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+li a {
+  display: block;
+  color: rgb(221, 221, 221);
+  transition: color 0.5s ease;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  text-align: center;
+  padding: 5px, 7px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(198, 177, 236);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+}
+
+
+h1{font-size: 48px;} 
+h2{font-size: 36px;} 
+h3{font-size: 24px;} 
+h4{font-size: 18px;} 
+h5{font-size: 16px;} 
+h6{font-size: 14px;}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;    
+}
+
+
+.contenedorPrincipal {
+  margin: 0.6em auto;
+  padding: 0px, 0px;
+  background-color: black;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(69,33,91,1) 20%, rgba(0,0,0,1) 100%); 
+  width: 95%;
+}
+
+.sombra {
+  -webkit-box-shadow: 5px 5px 9px -3px rgb(71, 71, 71);
+  -moz-box-shadow: 5px 5px 9px -3px rgba(71,71,71,1);
+  box-shadow: 5px 5px 9px -3px rgba(71,71,71,1);
+}
+
+
+.nombre {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  color: rgb(201, 178, 245);
+  margin: 3px 15px;
+  padding: 0;
+}
+
+p {
+  padding: 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1em;
+  color: grey;
+}
+
+
+
+/*---- MENU -----------------------------------*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
+  z-index: 999;
+  position: sticky; /* Corrige sticky aquí */
+  top: 0;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin: 0 10px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: rgb(201, 178, 245);
+}
+
+.menu-toggle {
+  display: none; /* Oculto en pantallas grandes */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navbar ul {
+      display: none; /* Oculta el menú inicialmente */
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      z-index: 998;
+  }
+
+  .navbar ul.active {
+      display: flex; /* Muestra el menú al hacer clic */
+  }
+
+  .menu-toggle {
+      display: block; /* Botón hamburguesa */
+  }
+}
+
+
+.navbar-flex {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-basis: 30%;
+}
+
+.navbar-flex-centro {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-basis: 70%;
+  justify-content: center;
+}
+
+.navbar-flex-der {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  flex-basis: 25%;
+  justify-content: flex-end;
+}
+
+
+
+/*---- BIENVENIDA ------------------------*/
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh; /* La sección ocupa toda la ventana del navegador */
+  background-image: url('../images/pexels-roneferreira-2728557.jpg'); /* Imagen de fondo */
+  background-size: cover;
+  background-repeat: no-repeat; /* Evita que se repita */
+  background-position: center;
+  transition: filter 0.5s ease-in-out; /* Transición suave */
+  -moz-transition: filter 0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white; /* Texto blanco para contrastar con la imagen */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.438); /* Capa semitransparente */
+  z-index: 1;
+}
+
+.hero:hover {
+  filter: brightness(1.3); /* Aumenta el brillo al hacer hover */
+}
+
+.hero-content {
+  position: relative;
+  margin: 10px;
+  z-index: 2; /* Coloca el texto sobre la capa oscura */
+}
+
+.hero-content p {
+  margin-bottom: 1rem; /* Ajusta según el espacio necesario */
+  color: #a0a0a0;
+}
+
+.btn-cta {
+  padding: 10px 20px;
+  background-color: #45215b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: #6d3f85;
+}
+
+
+/*----- PROXIMOS EVENTOS -----------*/
+
+.eventos-proximos {
+  padding: 2rem;
+  background-color: #000000;
+  text-align: center;
+  color: white;
+}
+
+.eventos-proximos h2 {
+  font-size: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  color: #ab8ccc;
+  color: rgb(201, 178, 245);
+  font-weight: 200;
+}
+
+/* Diseño grid para tarjetas */
+.eventos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Tarjetas en filas */
+  gap: 2rem; /* Espacio entre tarjetas */
+  justify-content: center; /* Centra las tarjetas */
+}
+
+.evento-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #272727; /* Color de fondo distintivo */
+  border-radius: 8px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5); /* Efecto de sombra */
+  overflow: hidden;
+  padding: 1rem; /* Espaciado interno */
+  transition: transform 0.3s ease;
+}
+
+.evento-item:hover {
+  transform: scale(1.03); /* Efecto al pasar el cursor */
+}
+
+/* Imágenes con tamaño fijo */
+.evento-flyer {
+  width: 230px;
+  height: 327px;
+  margin: 0 auto; /* Centra la imagen dentro de la tarjeta */
+}
+
+.evento-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se ajuste sin deformarse */
+}
+
+/* Información del evento */
+.evento-info {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en columna */
+  justify-content: space-between; /* Espacia los elementos uniformemente */
+  height: 100%; /* El contenedor ocupa todo el espacio disponible */
+  padding: 1rem;
+  text-align: center;
+}
+
+.evento-info h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgb(201, 178, 245);
+  margin-bottom: 0.5rem;
+}
+
+.evento-info p {
+  font-size: 1rem;
+  color: #aaa9a9;
+  margin-bottom: 0.3rem;
+}
+
+.evento-contacto {
+  margin-top: auto; /* Empuja el botón hacia el final */
+  padding: 0.5rem 1rem;
+  background-color: #6d3f85;
+  
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.evento-contacto:hover {
+  background-color: #45215b;
+}
+
+.evento-fecha {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.evento-hora {
+  font-weight: normal;
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+.evento-precio {
+  font-size: 1rem;
+  color: #cccccc;
+  margin-bottom: 0.5rem; /* Espacio natural antes del botón */
+}
+
+/*---- Estilos para el modal ------------ */
+
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%; /* Imagen ocupa el 90% del ancho de la pantalla */
+  max-height: 90%; /* Imagen ocupa el 90% de la altura */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #ff6b6b;
+}
+
+
+/*----- Footer  -------------------------------*/
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  padding: 2.5rem;
+  background-color: #261233;
+}
+
